@@ -1,0 +1,3 @@
+---
+- include: install_git.yml
+- include: install_ntp.yml

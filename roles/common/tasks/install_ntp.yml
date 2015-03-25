@@ -1,0 +1,6 @@
+---
+- name: Install ntp
+  action: apt pkg={{item}} state=installed
+  notify: restart ntp
+  with_items:
+    - ntp

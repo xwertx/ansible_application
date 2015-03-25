@@ -1,0 +1,6 @@
+---
+- hosts: dev
+  user: los
+  roles:
+    - common
+    - mysql
