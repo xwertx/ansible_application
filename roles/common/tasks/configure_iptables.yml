@@ -1,0 +1,7 @@
+---
+- name: Create directory
+  file: path=/etc/sysconfig state=directory
+
+- name: Configure iptables rules
+  copy: src=iptables-save dest=/etc/sysconfig/iptables
+  notify: restart iptables
