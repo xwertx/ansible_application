@@ -1,0 +1,6 @@
+---
+- name: Add group "wordpress"
+  group: name=wordpress
+
+- name: Add user "wordpress"
+  user: name=wordpress group=wordpress home=/srv/wordpress/

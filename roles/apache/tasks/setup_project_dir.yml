@@ -1,3 +1,3 @@
-- name: Copy vhost
-  template: src=sites-enabled/vhost.cfg dest=/etc/apache2/sites-enabled/{{project['name']}}.cfg
+# - name: Copy vhost
+#   template: src=sites-enabled/vhost.cfg dest=/etc/apache2/sites-enabled/{{project['name']}}.cfg
   #plik musi być w katalogu templates
