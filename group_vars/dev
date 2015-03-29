@@ -30,3 +30,6 @@ mysql_repl_role: master
 mysql_db_id: 7
 
 server_hostname: www.example.com
+
+project:
+  name: "AnsibleWordPressProject"

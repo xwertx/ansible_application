@@ -1,7 +1,7 @@
 ---
 - name: Install apache2
   action: apt pkg={{item}} state=installed
-  notify: restart ntp
+  notify: restart apache2
   with_items:
     - apache2
     - libapache2-mod-php5

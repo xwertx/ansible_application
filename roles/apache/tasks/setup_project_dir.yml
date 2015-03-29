@@ -1,3 +1,11 @@
-# - name: Copy vhost
-#   template: src=sites-enabled/vhost.cfg dest=/etc/apache2/sites-enabled/{{project['name']}}.cfg
-  #plik musi być w katalogu templates
+- name: Copy vhost
+  template: src=vhost.cfg dest=/etc/apache2/sites-enabled/{{project['name']}}.conf
+  notify: restart apache2
+
+- name: Remove default
+  command: creates=/etc/apache2/sites-enabled/default mv /etc/apache2/sites-enabled/000-default.conf /etc/apache2/sites-enabled/default
+  notify: restart apache2
+
+- name: Create dir
+  file: path=/var/www/{{project['name']}} state=directory
+  notify: restart apache2
