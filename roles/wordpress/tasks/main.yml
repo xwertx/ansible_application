@@ -1,6 +1,17 @@
 ---
+- name: Download Wordpress
+  get_url: url=http://wordpress.org/wordpress-{{ wp_version }}.tar.gz dest=/var/www/wordpress-{{ wp_version }}.tar.gz
+           sha256sum="{{ wp_sha256sum }}"
+- unarchive: src=/var/www/wordpress-{{ wp_version }}.tar.gz dest=/var/www copy=no
+
+
+
 - name: Add group "wordpress"
   group: name=wordpress
 
 - name: Add user "wordpress"
-  user: name=wordpress group=wordpress home=/srv/wordpress/
+  user: name=wordpress group=wordpress home=/var/www/{{project['name']}}
+
+- name : Copy wordpress files to www folder
+  command: cp -r /var/www/wordpress/. /var/www/{{project['name']}}/
+  # copy: src=/var/www/wordpress dest=/var/www/{{project['name']}}/ owner=wordpress group=wordpress mode=0644
