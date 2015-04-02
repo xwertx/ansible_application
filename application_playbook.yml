@@ -1,6 +1,6 @@
 ---
 - hosts: dev
-  user: mint2
+  user: #set user name, needed to ssh connection
   roles:
     - common
     - mysql
