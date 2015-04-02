@@ -24,18 +24,6 @@ mysql_db:
      - name: bar
        replicate: no
 
-mysql_users:
-     - name: benz
-       pass: foobar
-       priv: "*.*:ALL"
-
-mysql_repl_user:
-  - name: repl
-    pass: foobar
-
-mysql_repl_role: master
-mysql_db_id: 7
-
 server_hostname: www.example.com
 
 project:
