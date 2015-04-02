@@ -22,10 +22,3 @@
 
 - name: copy .my.cnf file with root password credentials
   template: src=.my.cnf.j2 dest=~/.my.cnf mode=0600
-
-  # Create a new database with name 'bobdata'
-# - mysql_db: name=bobdata state=present
-
-# # Copy database dump file to remote host and restore it to database 'my_db'
-# - copy: src=dump.sql.bz2 dest=/tmp
-# - mysql_db: name=my_db state=import target=/tmp/dump.sql.bz2
