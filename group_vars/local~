@@ -1,0 +1,24 @@
+---
+wp_version: 4.1.1
+wp_sha256sum: 618ac08c2be3959b37f4ee0006558da65b7a4bca19bfb4b86ea60e5d53043ee9
+
+mysql_service: mysql
+mysql_conf_dir: "/etc/"
+
+wp_db_name: wordpress 
+wp_db_user: wordpress
+wp_db_password: ZAQ!2wsx
+
+mysql_pkgs:
+  - python-selinux
+  - mysql-server
+  - python-mysqldb
+
+mysql_port: 3306                 
+mysql_bind_address: "0.0.0.0"    
+mysql_root_db_pass: ZAQ!2wsx       
+
+server_hostname: www.example.com
+
+project:
+  name: "AnsibleWordPressProject"

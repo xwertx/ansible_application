@@ -1,2 +1,9 @@
-[dev]
-#add ip, or host name here
+[local]
+127.0.0.1
+
+[ubuntu]
+192.168.30.134
+
+[all]
+127.0.0.1
+192.168.30.134

@@ -1,6 +1,7 @@
 ---
-- hosts: dev
-  user: #set user name, needed to ssh connection
+- hosts: local
+  remote_user: ubuntu1
+  sudo: yes
   roles:
     - common
     - mysql
